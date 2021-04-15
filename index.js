@@ -139,7 +139,7 @@ function getLastReview(array) {
     let review=array[array.length-1]
     return `${review.name} gave the restaurant a ${review.rating} star review, and their feedback was: ${review.feedback}`
 } 
-console.log(getLastReview(reviews))
+// console.log(getLastReview(reviews))
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
@@ -158,8 +158,14 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(array,rating) {
+    let filterArray = []
+    for(let i = 0; i < array.length; i++){
+      if(array[i].rating == rating){
+        filterArray.push(array[i])
+      }
+    }
+    return filterArray
   }
 
   
