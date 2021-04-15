@@ -211,12 +211,17 @@ Use the carMaker function below to do the following:
   Then we called car1.drive(100)
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
-let cars = {}
 
-function carMaker(miles,){
-    /* code here */
-    
+function carMaker(miles){
+    return {
+      odometer: miles,
+      drive: function(distance){
+        return this.odometer += distance
+      } 
+    }
 }
+let car1 = carMaker(10)
+// console.log(car1.drive(20))
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
